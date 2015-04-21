@@ -4,6 +4,7 @@
 #
 #-------------------------------------------------
 
+include(lib/QMapControl/QMapControl.pri)
 QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -11,12 +12,19 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = PiCAR
 TEMPLATE = app
 
+DEPENDPATH += src
 
-SOURCES += main.cpp\
-        mainwindow.cpp \
-    gps.cpp
+SOURCES +=  src/main.cpp\
+            src/mainwindow.cpp \
+            src/gps.cpp \
+            src/carte.cpp \
+            src/gpsstatus.cpp
 
-HEADERS  += mainwindow.h \
-    gps.h
+HEADERS  += src/mainwindow.h \
+            src/gps.h \
+            src/carte.h \
+            src/gpsstatus.h
 
-FORMS    += mainwindow.ui
+FORMS    += src/mainwindow.ui \
+            src/carte.ui \
+            src/gpsstatus.ui
